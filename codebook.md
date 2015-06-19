@@ -156,7 +156,7 @@ Each of these "mean" and "std" values in the final data table are themselves the
 subject|WALKING|WALKING_UPSTAIRS|WALKING_DOWNSTAIRS|SITTING|STANDING|LAYING
 ---|---|---|---|---|---|---
 1|95|53|49|47|53|50
-g2|59|48|47|46|54|48
+2|59|48|47|46|54|48
 3|58|59|49|52|61|62
 4|60|52|45|50|56|54
 5|56|47|47|44|56|52
