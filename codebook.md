@@ -6,11 +6,13 @@ This code book is the companion to the filtered, summarized, and labeled data se
 
 R code in the file `run_analysis.R` is for downloading, reading, cleaning, and summarizing the raw data. Available on github.com/mbontrager/activity_recognition.
 
-To read the final, "tidy" data set into R you might use the following command:
+To read the final "tidy" data set into R you might use the following command:
 
 `tidyData <- read.csv("summarized_Activity_Data.txt")`
 
 The original data from which this smaller summarized  data set is derived is described as follows (from the [project website](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)):
+
+##Original data description
 
 >    Data Set Information:
 >
@@ -30,11 +32,11 @@ The original data from which this smaller summarized  data set is derived is des
 
 # Operations on Raw Data
 
-For this smaller dataset, the training and test datasets (561 variables measures on 20 and 10 subjects, respectively) were merged into one large dataset, and only fields including the mean and standard deviation were retained. This was done simply by retaining any variable with the strings "mean" or "std". Activity information was added in a human-readable format (e.g. "WALKING_UPSTAIRS") and subject information was added to every entry. 
+For this smaller dataset, the training and test datasets (561 variables measures on 20 and 10 subjects, respectively) were merged into one large dataset, and only fields including the mean and standard deviation were retained. This was done simply by retaining any variable with the strings "mean" or "std". Activity information was added in a human-readable format (e.g. "WALKING_UPSTAIRS") and subject information was added.
 
 This yielded 10,299 observations on 88 variables including the subject and activity information. Subsequently, the mean value for all of the 86 measurement variables (each mean and std dev) for each subject and for each activity was calculated to produce the final dataset. A brief explanation of the measurement variables (again obtained with the raw data set) follows:
 
-###Feature information from project `features_info.txt`
+##Feature information from project `features_info.txt`
 
 >The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 >
@@ -45,41 +47,24 @@ This yielded 10,299 observations on 88 variables including the subject and activ
 >These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 >
->tBodyAcc-XYZ
-
->tGravityAcc-XYZ
-
->tBodyAccJerk-XYZ
-
->tBodyGyro-XYZ
-
->tBodyGyroJerk-XYZ
-
->tBodyAccMag
-
->tGravityAccMag
-
->tBodyAccJerkMag
-
->tBodyGyroMag
-
->tBodyGyroJerkMag
-
->fBodyAcc-XYZ
-
->fBodyAccJerk-XYZ
-
->fBodyGyro-XYZ
-
->fBodyAccMag
-
->fBodyAccJerkMag
-
->fBodyGyroMag
-
->fBodyGyroJerkMag
-
->
+>tBodyAcc-XYZ  
+>tGravityAcc-XYZ  
+>tBodyAccJerk-XYZ  
+>tBodyGyro-XYZ  
+>tBodyGyroJerk-XYZ  
+>tBodyAccMag  
+>tGravityAccMag  
+>tBodyAccJerkMag  
+>tBodyGyroMag  
+>tBodyGyroJerkMag  
+>fBodyAcc-XYZ  
+>fBodyAccJerk-XYZ  
+>fBodyGyro-XYZ  
+>fBodyAccMag  
+>fBodyAccJerkMag  
+>fBodyGyroMag  
+>fBodyGyroJerkMag  
+>  
 >Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 >
 >gravityMean
@@ -88,11 +73,12 @@ This yielded 10,299 observations on 88 variables including the subject and activ
 >tBodyGyroMean
 >tBodyGyroJerkMean
 
+##Variables
 
-The variables in the final dataset are as follows:
+The variables in the final dataset are:
 
-subject - Unique ID for the subject  
-activity - Human-readable activity name  
+subject - **Unique ID for the subject**  
+activity - **Human-readable activity name**  
 tBodyAcc.meanX  
 tBodyAcc.meanY  
 tBodyAcc.meanZ  
@@ -163,6 +149,7 @@ angle.X.gravityMean
 angle.Y.gravityMean  
 angle.Z.gravityMean  
 
+##Summaries
 
 Each of these "mean" and "std" values in the final data table are themselves the mean of the number of observations gathered from measurements on different activities and different subjects. The following table gives the number of observations per subject by activity that were used to generate the mean values in the final table. 
 
