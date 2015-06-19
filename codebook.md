@@ -2,7 +2,9 @@
 ###Martin Bontrager
 ###18 June, 2015
 
-This code book is the companion to the filtered, summarized, and labeled data set for human activity recognition. The raw data are available [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). R code in the file `run_analysis.R` for reading and cleaning the data, as well as generating the associated "tidy" subset, is available on github.com/mbontrager/activity_recognition.
+This code book is the companion to the filtered, summarized, and labeled data set for human activity recognition. The raw data are available [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). 
+
+R code in the file `run_analysis.R` is for downloading, reading, cleaning, and summarizing the raw data. Available on github.com/mbontrager/activity_recognition.
 
 To read the final, "tidy" data set into R you might use the following command:
 
@@ -10,13 +12,13 @@ To read the final, "tidy" data set into R you might use the following command:
 
 The original data from which this smaller summarized  data set is derived is described as follows (from the [project website](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)):
 
->    ###Data Set Information:
+>    Data Set Information:
 >
 >    The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 >
 >    The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 >
->    ###Attribute Information:
+>    Attribute Information:
 
 >    For each record in the dataset it is provided:
 >    - Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
@@ -68,6 +70,7 @@ This yielded 10,299 observations on 88 variables including the subject and activ
 >tBodyAccJerkMean
 >tBodyGyroMean
 >tBodyGyroJerkMean
+
 
 The variables in the final dataset are as follows:
 
